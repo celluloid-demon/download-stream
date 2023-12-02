@@ -1,0 +1,6 @@
+services:
+  download-stream-main:
+    image: download-stream-main
+    build: ./local/download-stream-main
+    volumes:
+      - ./output:/output
