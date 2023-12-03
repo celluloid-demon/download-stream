@@ -40,7 +40,7 @@ init() {
 
 		cp ${RESOURCE_DIR}/$(basename "$SETTINGS")* ./
 
-		mv "${SETTINGS}*" "$SETTINGS"
+		mv "$SETTINGS"* "$SETTINGS"
 		
 	fi
 
