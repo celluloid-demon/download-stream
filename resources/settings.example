@@ -1,0 +1,14 @@
+# Settings (syntax is shell script)
+
+# How to use:
+#   - Rename to 'settings' (w/o the '.example' extension).
+#   - Move to root of project folder
+
+# in minutes
+export DURATION=180
+
+export OUTPUT_DIR="./output"
+
+export OUTPUT_FILE_BASENAME="wfpk"
+
+export STREAM_URL="http://lpm.streamguys1.com/wfpk-web"

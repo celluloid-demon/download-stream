@@ -2,10 +2,12 @@
 
 # Declare vars
 curl_pid=
+duration_min=$DURATION
+duration_sec=
 retry_delay=5
 output_path="/output"
-output_file_basename="wfpk"
-stream_url="http://lpm.streamguys1.com/wfpk-web"
+output_file_basename="$OUTPUT_FILE_BASENAME"
+stream_url="$STREAM_URL"
 
 # Check and restart curl process if needed
 check_and_restart_curl() {
@@ -32,11 +34,22 @@ main() {
 
 	fi
 
+	# Exit on error if no radio stream url specified
+	if [ -z "$STREAM_URL" ]; then
+
+		echo "Error: '\$STREAM_URL' not set, terminating."
+		exit 1
+
+	fi
+
 	# Start time
 	start_time=$(date +%s)
 
+	# Convert duration from minutes to seconds
+	duration_sec=$((duration_min * 60))
+
 	# End time
-	end_time=$((start_time + 10800))  # 3 hours in seconds
+	end_time=$((start_time + duration_sec))  # 3 hours in seconds
 
 	# Attempt to download the stream with retries for 3 hours
 	while [ $(date +%s) -lt $end_time ]; do

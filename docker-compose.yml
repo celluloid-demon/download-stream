@@ -1,6 +1,11 @@
+version: '3'
 services:
   download-stream-main:
     image: download-stream-main
     build: ./local/download-stream-main
+    environment:
+      - DURATION=${DURATION}
+      - OUTPUT_FILE_BASENAME=${OUTPUT_FILE_BASENAME}
+      - STREAM_URL=${STREAM_URL}
     volumes:
-      - ./output:/output
+      - ${OUTPUT_DIR}:/output

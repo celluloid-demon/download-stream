@@ -1,0 +1,59 @@
+# lib
+
+# Description:		Determine class of host operating system.
+# Example:			OS_TYPE="$(get_os_type)"
+# Possible values:	[ LINUX, MACOS, WSL, WINDOWS, UNKNOWN_OS ]
+
+get_os_type() {
+
+	case "$(uname -s)" in
+
+		Linux*)
+
+			if grep -Eiq Microsoft /proc/version; then
+
+				echo "WSL"
+
+			else
+
+				echo "LINUX"
+
+			fi
+			;;
+
+		Darwin*)
+
+			echo "MACOS"
+			;;
+
+		CYGWIN*|MINGW32*|MSYS*)
+
+			echo "WINDOWS"
+			;;
+
+		*)
+
+			echo "UNKNOWN_OS"
+			;;
+
+	esac
+
+}
+
+# Description:	Wait for process to start.
+# Usage:		wait_for_process <process_name>
+# Example:		wait_for_process docker
+
+wait_for_process() {
+
+	# 'until' will run loop until condition is true
+	until pids=$(pidof $1) ; do
+
+		sleep 1
+		echo "..."
+
+	done
+
+	echo "Up."
+
+}
