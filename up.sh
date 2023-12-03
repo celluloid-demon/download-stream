@@ -39,6 +39,8 @@ init() {
 		echo "\'$SETTINGS\' file not found, creating..."
 
 		cp ${RESOURCE_DIR}/$(basename "$SETTINGS")* ./
+
+		mv "${SETTINGS}*" "$SETTINGS"
 		
 	fi
 
