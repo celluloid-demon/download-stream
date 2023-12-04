@@ -35,7 +35,7 @@ main() {
 	crontab -l > "$temp_cron"
 
 	# Add the new cron entry
-	echo "$CRON_SCHEDULE $CRON_COMMAND_PATH # $CRON_DESCRIPTION" >> "$temp_cron"
+	echo "$CRON_SCHEDULE $CRON_COMMAND_PATH # $CRON_DESCRIPTION $CRON_MARKER" >> "$temp_cron"
 
 	# Install the new crontab
 	crontab "$temp_cron"

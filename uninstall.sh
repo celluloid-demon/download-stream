@@ -30,6 +30,10 @@ main() {
     docker image rm $IMAGE_NAME
     docker system prune
 
+	crontab -l | grep -v "$CRON_MARKER" | crontab - && crontab -l
+
+	echo "Done."
+
 }
 
 main

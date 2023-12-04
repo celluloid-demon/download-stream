@@ -18,3 +18,5 @@ CRON_COMMAND="./up.sh"
 CRON_SCHEDULE="0 12 * * 1-5"
 
 CRON_DESCRIPTION="Run script every weekday at 12:00 PM"
+
+CRON_MARKER="c1590ef7eb769601a84790efd5d298c8"

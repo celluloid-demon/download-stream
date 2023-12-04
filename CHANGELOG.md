@@ -2,14 +2,16 @@
 
 ## Planned
 
-- added crontab cleanup to uninstall script
+- ...
 
 ## Testing
 
-- added helper script to create cron schedule
+- added crontab cleanup to uninstall script
+- ...
 
 ## Finished
 
+- added helper script to create cron schedule
 - added uninstall script
 - have app.sh exit on error if no radio stream url specified
 - added option to configure OUTPUT_DIR in docker-compose file from shell env var
