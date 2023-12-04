@@ -1,7 +1,7 @@
 # Settings (syntax is shell script)
 
 # How to use:
-#   - Rename to 'settings' (w/o the '.example' extension).
+#   - Rename to 'settings' (w/o the '.example' extension)
 #   - Move to root of project folder
 
 # in minutes
@@ -12,3 +12,9 @@ export OUTPUT_DIR="./output"
 export OUTPUT_FILE_BASENAME="wfpk"
 
 export STREAM_URL="http://lpm.streamguys1.com/wfpk-web"
+
+CRON_COMMAND="./up.sh"
+
+CRON_SCHEDULE="0 12 * * 1-5"
+
+CRON_DESCRIPTION="Run script every weekday at 12:00 PM"

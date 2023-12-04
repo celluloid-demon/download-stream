@@ -3,6 +3,11 @@
 # Exit on error
 set -e
 
+# Set working directory (for running from cron)
+SCPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
+SCPT_DIR="$(dirname "$SCPT_PATH")"
+cd "$SCPT_DIR"
+
 # Declare constants
 LIBRARY="./lib"
 RESOURCE_DIR="./resources"
