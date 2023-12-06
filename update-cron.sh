@@ -18,7 +18,7 @@ init() {
 	# Source settings file
 	. "$SETTINGS"
 
-	# Get full path of cron command
+	# Get full path of command for cron
 	CRON_COMMAND_PATH="$(readlink -f "$CRON_COMMAND")"
 
 }

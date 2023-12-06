@@ -6,11 +6,11 @@
 
 ## Testing
 
-- added crontab cleanup to uninstall script
 - ...
 
 ## Finished
 
+- added crontab cleanup to uninstall script
 - added helper script to create cron schedule
 - added uninstall script
 - have app.sh exit on error if no radio stream url specified
