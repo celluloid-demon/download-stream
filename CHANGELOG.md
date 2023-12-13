@@ -2,7 +2,6 @@
 
 ## Planned
 
-- 
 - ...
 
 ## Testing
@@ -11,6 +10,7 @@
 
 ## Finished
 
+- added option to run watcher automatically 
 - added watcher
 - added dump-settings
 - added crontab cleanup to uninstall script

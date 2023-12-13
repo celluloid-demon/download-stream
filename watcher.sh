@@ -12,24 +12,11 @@ SCPT_DIR="$(dirname "$SCPT_PATH")"
 cd "$SCPT_DIR"
 
 # Declare constants
-LIBRARY="./lib"
 RESOURCE_DIR="./resources"
 SETTINGS="./settings"
 
 # Initialize script
 init() {
-
-	# Source library file
-	if [ -e "$LIBRARY" ]; then
-
-		source "$LIBRARY"
-
-	else
-
-		echo "\'$LIBRARY\' file not found, terminating."
-		exit 1
-
-	fi
 
 	# Create settings file if it doesn't already exist
 	if [ ! -e "$SETTINGS" ]; then

@@ -24,3 +24,5 @@ CRON_DESCRIPTION="Run script every weekday at 8:00 PM GMT (3:00 PM Eastern / 12:
 CRON_MARKER="c1590ef7eb769601a84790efd5d298c8"
 
 WATCHER_DIR="$HOME/resilio-sync/wfpk"
+
+WATCHER_SCPT="./watcher.sh"

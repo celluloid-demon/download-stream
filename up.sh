@@ -76,6 +76,13 @@ main() {
 
 	docker compose up --detach
 
+	# Wait a beat
+	echo "Waiting to start watcher..."
+	sleep 5
+
+	# Start watcher
+	eval "$WATCHER_SCPT"
+
 }
 
 main
