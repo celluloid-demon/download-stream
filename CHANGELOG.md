@@ -2,7 +2,7 @@
 
 ## Planned
 
-- added watcher
+- 
 - ...
 
 ## Testing
@@ -11,6 +11,7 @@
 
 ## Finished
 
+- added watcher
 - added dump-settings
 - added crontab cleanup to uninstall script
 - added helper script to create cron schedule

@@ -16,14 +16,6 @@ LIBRARY="./lib"
 RESOURCE_DIR="./resources"
 SETTINGS="./settings"
 
-curl_pid=
-duration_min=$DURATION
-duration_sec=
-retry_delay=5
-output_path="/output"
-output_file_basename="$OUTPUT_FILE_BASENAME"
-stream_url="$STREAM_URL"
-
 # Initialize script
 init() {
 
