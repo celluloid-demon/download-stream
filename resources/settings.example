@@ -4,7 +4,7 @@
 #   - Rename to 'settings' (w/o the '.example' extension)
 #   - Move to root of project folder
 
-# in minutes
+# (in minutes)
 export DURATION=180
 
 export OUTPUT_DIR="./output"
@@ -13,10 +13,14 @@ export OUTPUT_FILE_BASENAME="wfpk"
 
 export STREAM_URL="http://lpm.streamguys1.com/wfpk-web"
 
+CONTAINER_BASENAME_MAIN="download-stream-main"
+
 CRON_COMMAND="./up.sh"
 
-CRON_SCHEDULE="0 12 * * 1-5"
+CRON_SCHEDULE="0 20 * * 1-5"
 
-CRON_DESCRIPTION="Run script every weekday at 12:00 PM"
+CRON_DESCRIPTION="Run script every weekday at 8:00 PM GMT (3:00 PM Eastern / 12:00 PM Pacific)"
 
 CRON_MARKER="c1590ef7eb769601a84790efd5d298c8"
+
+WATCHER_DIR="$HOME/resilio-sync/wfpk"
