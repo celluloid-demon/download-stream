@@ -76,12 +76,11 @@ main() {
 
 	docker compose up --detach
 
-	# Wait a beat
-	echo "Waiting to start watcher..."
-	sleep 5
+	container_id_main=$(docker ps -aqf "name=$CONTAINER_BASENAME_MAIN")
 
-	# Start watcher
-	eval "$WATCHER_SCPT"
+	docker container wait $container_id_main
+
+	eval "$CMD_POST"
 
 }
 

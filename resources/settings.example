@@ -26,3 +26,8 @@ CRON_MARKER="c1590ef7eb769601a84790efd5d298c8"
 WATCHER_DIR="$HOME/resilio-sync/wfpk"
 
 WATCHER_SCPT="./watcher.sh"
+
+# Downstream vars
+
+# Command to run after container spindown
+# CMD_POST="mv ./${OUTPUT_DIR}/* ${HOME}/"
